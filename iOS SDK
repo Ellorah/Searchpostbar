@@ -20,3 +20,4 @@ git clone git://github.com/facebook/facebook-ios-sdk.git
                                                      annotation:annotation];
 }
 ditto -ck --sequesterRsrc --keepParent `ls -1 -d -t ~/Library/Developer/Xcode/DerivedData/*/Build/Products/*-iphonesimulator/*.app | head -n 1` path/to/YourApp.zip
+$ git clone git://github.com/phonegap/ios-sim.git
