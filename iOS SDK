@@ -21,3 +21,12 @@ git clone git://github.com/facebook/facebook-ios-sdk.git
 }
 ditto -ck --sequesterRsrc --keepParent `ls -1 -d -t ~/Library/Developer/Xcode/DerivedData/*/Build/Products/*-iphonesimulator/*.app | head -n 1` path/to/YourApp.zip
 $ git clone git://github.com/phonegap/ios-sim.git
+FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+loginButton.readPermissions = @[@”email”, @”user_friends”];if ([[FBSDKAccessToken currentAccessToken] hasGranted:@"publish_actions"]) {
+  // TODO: publish content.
+} else {
+  FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+  [loginManager logInWithPublishPermissions:@[@"publish_actions"] handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+    //TODO: process error or result.
+  }];
+}
