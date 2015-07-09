@@ -1,0 +1,4 @@
+public void onCreate() {
+  Parse.initialize(this, "gIYfmtx5QTpzL72ufozyMpDm6oZTgI3hLA2oG4yW", "6i2VZhKwDqNEkinipWN6QtoTah4suP86vLRewlkJ");
+  ParseInstallation.getCurrentInstallation().saveInBackground();
+}
